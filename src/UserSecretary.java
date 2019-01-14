@@ -4,20 +4,17 @@
  * and open the template in the editor.
  */
 
-
 /**
  *
  * @author Marti
  */
-public class UserPatient extends User{
-    
-    public Appointment[] appointments;
-    public Prescription[] prescriptions;
-    
+public class UserSecretary extends User
+{
+      
     @Override
     public void ShowUserUi()
     {
-        System.out.println("PATIENT SHOW USER UI CALLED!");
-        //UserDatabase.GetInstance().TryLogin("", "");
+        System.out.println("SECRETARY SHOW USER UI CALLED!");
+        
     }
 }

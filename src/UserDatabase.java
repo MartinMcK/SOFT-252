@@ -13,7 +13,19 @@ import java.util.*;
 
 public class UserDatabase
 {
+    public static UserDatabase instance;
+            
+        public UserDatabase()
+        {
+            instance = this;
+        }
+        public static UserDatabase GetInstance()
+        {
+            return instance;
+        }
+    
         public ArrayList<User> users = new ArrayList<User>();
+        public ArrayList<User> pendingUsers = new ArrayList<User>();
         
         
         public String TryLogin(String code, String password)
@@ -32,6 +44,10 @@ public class UserDatabase
             System.out.println("CANNOT FIND USER (" + code + " , " + password + ")");
             return "";
         }
+        public void CreateAccount()
+        {
+            
+        }
         
         public void CreatePatient()
         {
@@ -42,5 +58,10 @@ public class UserDatabase
             newPatient.secondName = "Smith";            
             users.add(newPatient);
             users.get(0).ShowUserUi();
+        }
+        
+        public void CreatePlaceholderUsers()
+        {
+            CreatePatient();
         }
 }
