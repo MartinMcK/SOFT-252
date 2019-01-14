@@ -29,8 +29,8 @@ public class UserDatabase
                     }
                 }                
             }
-            
-            return "CANNOT FIND USER (" + code + " , " + password;
+            System.out.println("CANNOT FIND USER (" + code + " , " + password + ")");
+            return "";
         }
         
         public void CreatePatient()
